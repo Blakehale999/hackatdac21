@@ -80,7 +80,7 @@ always @(posedge clk_i)
         if(~(rst_ni && ~jtag_unlock && ~rst_9))
             begin
               for (j=0; j < 6; j=j+1) begin
-                reglk_mem[j] <= 'h0;
+                reglk_mem[j] <= 'hffffffff;
               end
             end
         else if(en && we)
