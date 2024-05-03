@@ -148,7 +148,7 @@ logic                      en, en_acct;
 
   assign core_key0 = debug_mode_i ? 'b0 : {key_reg0[7], key_reg0[6],
                       key_reg0[5], key_reg0[4], key_reg0[3], key_reg0[2], key_reg0[1], key_reg0[0]};
-  assign core_key1 = {key_reg1[7], key_reg1[6],
+  assign core_key1 = debug_mode_i ? 'b0 : {key_reg1[7], key_reg1[6],
                       key_reg1[5], key_reg1[4], key_reg1[3], key_reg1[2], key_reg1[1], key_reg1[0]};
   assign core_key2 = debug_mode_i ? 'b0 : {key_reg2[7], key_reg2[6],
                       key_reg2[5], key_reg2[4], key_reg2[3], key_reg2[2], key_reg2[1], key_reg2[0]};
